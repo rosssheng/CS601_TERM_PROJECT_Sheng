@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /*google fonts */
+    box-sizing: border-box;
+
+}
+
+body{
+    background: #080808;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/header_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.container{
+    padding: 20px 2%;
+}
+
+nav{  /*nav header, logo on left, nav links on the right */
+    display: flex;
+    align-items: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.logo{
+    width: 140px;
+}
+nav ul li{ /*nav header horizontally align */
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+nav ul li a{ /*properties for nav header links*/
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+    position: relative;
+}
+nav ul li a::after{ /*hide underline under menu links*/
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(203, 38, 38);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+nav ul li a:hover:after{ /*enable header underline after hover*/
+    width: 100%;
+}
+
+.heading{ /*putting the heading text in the middle*/
+    margin-top: 20%;
+    font-size: 30px;
+}
+.heading h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+/*about me*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.first_col{
+    flex-basis: 5%;
+}
+
+/*round the corners of image*/
+.first_col img{
+    width: 650%;
+    border-radius: 350px;
+
+}
+.second_col{
+    flex-basis: 55%;
+}
+/*set properties of about me text*/
+.description{
+    font-family: Open;
+    margin-top: 25px;
+    font-size: 60px;
+    color: rgb(203, 38, 38);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+/*set properties of description*/
+p{
+    margin-top: 100px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-weight: 300;
+    
+}
+/*set properties of sub tabs*/
+.sub_about{
+    display: flex;
+    margin: 20px 0 40px;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+.links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.links::after{ /*hide underline under skill tab links*/
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(203, 38, 38);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.2s;
+}
+.links.current-link::after{
+    width: 50%;
+}
+/*properties of sub descriptions under sub tabs*/
+.link-content ul li{
+    list-style: none;
+    margin: 50px 0;
+    text-align: center;
+    font-weight: 300;
+
+}
+.link-content ul li span{
+    color: rgb(232, 37, 37);
+    font-size:18px;
+}
+.link-content { /*hide current tablink contents*/
+    display:none;
+}
+.link-content.current-tab{/*make current tablink visible*/
+    display: block;
+}
+
+/*courses taken page*/
+#courses_heading{
+    padding: 30px 0;
+    
+    
+}
+/*grid layout*/
+.course_list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-gap: 100px;
+    margin-top: 50px;
+    
+}
+/*properties of grid items*/
+.course_list div{
+    text-align: center;
+    background: rgb(49, 48, 48);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.2s, transform, 0.2s;
+}
+.course_list div i{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.course_list div h2{
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 23px;
+}
+.course_list div p1{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.course_list div a{
+    text-decoration: none;
+    color: rgb(255, 255, 255); 
+}
+/*grid hover effect*/
+.course_list div:hover{
+    background: rgb(131, 73, 73);
+    transform: translateY(-10px);
+}
+
+.courses_heading{
+    font-family: Open;
+    margin-top: 25px;
+    font-size: 60px;
+    color: rgb(203, 38, 38);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+/*contact*/
+.contact_heading{
+    font-family: Open;
+    margin-top: 25px;
+    font-size: 60px;
+    color: rgb(203, 38, 38);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.sub_heading{
+    margin-top: 300px;
+    text-align: center;
+    font-weight: 500;
+}
+.left_col p{
+    text-align: center;
+    margin-top: 75px;
+    
+    font-weight: 500;
+
+}
+.social{
+    margin-top: 30px;
+    font-size: 100px;
+    text-align: center;
+    
+}
+/*properties of icons*/
+.social a{
+    text-decoration: none;
+    margin-right: 75px;
+    margin-left: 75px;
+    color: rgb(203, 38, 38);
+    display: inline-block;
+    transition: transform 0.2s;
+}
+/*hover effect on icons*/
+.social a:hover{
+    color: white;
+    transform: translateY(-10px);
+}
+.left_col{
+    flex-basis: 35%;
+}
+.right_col{
+    flex-basis: 50%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    border: 1px solid black;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: white;
+}
+.btn.second_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgb(203, 38, 38);
+    font-size: 30px;
+    border-radius: 4px;
+}
+.btn.second_btn:hover{
+    transform: translateY(-2px);
+    background-color: red;
+}
+
+.right_col form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(46, 42, 42);
+    padding: 25px;
+    margin: 50px 0;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+
+}
+
+
+
+/*resume */
+.button{
+    display: block;
+    margin: 50px auto;
+    border: 1px solid black;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: black;
+    background-color: rgb(203, 38, 38);
+    font-size: 30px;
+    margin-top: 300px;
+}
+.button:hover{
+    transform: translateY(-2px);
+    background-color: red;
+}
+
+#app{
+    font-family: Open;
+    margin-top: 25px;
+    font-size: 60px;
+    color: rgb(203, 38, 38);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+
+

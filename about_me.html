@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ross Sheng Computer Science Portfolio Website</title>
+    <link rel="stylesheet" href = "style.css">
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
+    crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap'); </style>
+</head>
+<body>
+<div id="about">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo" height="100"> <!-- consider removing/replacing with a different navigation header -->
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="courses_taken.html">Courses Taken</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+</div>
+<div id="about_me">
+    <div class="container">
+        <div class="row">
+            <div class="first_col">
+                <img src="images/about_me.png">
+            </div>
+            <div class="second_col">
+                <h1 class="description">About Me</h1>
+                <p>I am currently a graduate student studying Computer Science in Boston University. I was born and raised in Tokyo, Japan for 19 years before coming to Boston to pursue my bachelor's degree in Communications and advertising. With my unique experience overseas, I grew up 
+                    with a keen understanding of being able to put myself in other people's shoes to truly understand their viewpoints and opinions. With this foundation in communication skills, I set out to pursue my bachelor's degree to strengthen them. Then, I set out to grow my skillset in hard skills
+                     to challenge myself and pursue a career in Software Development following my undergraduate degree. Within two years, I learned how to code and develop projects, with strengths in Python and Java. Please click on my resume page to learn more about my career!
+                    </p>
+                <div class="sub_about">
+                    <p class="links current-link" onclick="openLink('education')">Education</p>
+                    <p class="links" onclick="openLink('skills')">Skills</p>
+                </div>
+                <div class="link-content current-tab" id="education">
+                    <ul>
+                        <li>
+                            <span>Graduate Degree 2021-2023</span><br>Boston University Metropolitan College Master of Science in Software Development
+                        </li>
+                        <li>
+                            <span>Bachelor's Degree 2017-2021</span><br>Boston University College of Communications Bachelor of Science in Communication Advertising
+                            <br>Minor in
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-content" id="skills">
+                    <ul>
+                        <li>
+                            <span>Hard Skills</span><br>Python, Java, Javascript
+                        </li>
+                        <li>
+                            <span>Soft Skills</span><br>Communication, Leadership, Teamwork
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
